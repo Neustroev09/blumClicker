@@ -13,6 +13,7 @@ def test_predict():
         conf=0.0,
     )
     result = {}
+    #clases = ["star", "bomb", "diamond", "dog"]
     clases = ["star", "bomb", "diamond"]
     for presult in presults:
         for idx, cls in enumerate(presult.boxes.cls):
@@ -34,20 +35,20 @@ class ObjectDetector:
         presults = self.model.predict(
             source=img,
             save=False,
-            conf=0.7,
+            conf=0.8,
             device=0,
             half=True,
             max_det=10,
-            stream=True
         )
 
         # Обработка результатов предсказания
         result = {
             "star": [],
             "bomb": [],
-            "diamond": []
+            "diamond": [],
+            "dog": []
         }
-        clases = ["star", "bomb", "diamond"]  # Определяем классы объектов
+        clases = ["star", "bomb", "diamond", "dog"]  # Определяем классы объектов
         for presult in presults:
             for idx, cls in enumerate(presult.boxes.cls):
                 result[clases[int(cls)]].append({

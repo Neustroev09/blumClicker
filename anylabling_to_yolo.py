@@ -6,7 +6,7 @@ def convert():
     path_to_json = 'C:/Users/maxim/blumClicker/dataset'
     print(path_to_json)
     if os.path.exists(path_to_json):
-        clases = ["star", "bomb", "diamond"]
+        clases = ["star", "bomb", "diamond", "dog"]
         for json_file in os.listdir(path_to_json):
             if json_file.endswith('.json'):
                 cajas_yolo = ""

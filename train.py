@@ -8,7 +8,7 @@ def train():
     results = model.train(
         data=os.path.join(current_path, 'dataset_yolo/data.yaml'),
         imgsz=320,
-        epochs=10,
+        epochs=100,
         batch=4,
         patience=30,
         name='yolov8n_320',

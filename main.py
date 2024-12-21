@@ -1,6 +1,6 @@
 import pyautogui
 from pyautogui import ImageNotFoundException
-from screenshotCreator import create_screenshot
+from screenshotCreator import create_screenshot,  create_screenshot_for_dataset
 from predict import ObjectDetector
 from clicker import clicker
 

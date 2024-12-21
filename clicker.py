@@ -5,10 +5,14 @@ import pyautogui
 def choose_object(objects):
     stars = objects.get("star", [])
     diamonds = objects.get("diamond", [])
+    #dog = objects.get("dog", [])
 
     random_number = random.randint(0, 100)
 
     chosen_object = {}
+    # if dog:
+    #     chosen_object = dog[-1]
+    # elif diamonds:
     if diamonds:
         if random_number < 90:
             chosen_object = diamonds[-1]

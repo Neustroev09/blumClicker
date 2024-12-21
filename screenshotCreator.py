@@ -6,10 +6,10 @@ def create_screenshot():
     return screen
 
 def create_screenshot_for_dataset():
-    counter = 0
+    counter = 110
     while (1):
         screenshot_name = f"screenshot_{counter}.png"
-        screen = pyautogui.screenshot(screenshot_name, region=(180, 138, 380, 590))
+        screen = pyautogui.screenshot(screenshot_name, region=(0, 65, 380, 590))
         print(f"Сделан скриншот {screenshot_name}")
         counter += 1
         time.sleep(2)
